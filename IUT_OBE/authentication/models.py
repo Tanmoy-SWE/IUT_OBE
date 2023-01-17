@@ -9,5 +9,5 @@ class Course(models.Model):
 
 class AssignedCourses(models.Model):
     course = models.ForeignKey(Course, on_delete=models.CASCADE)
-    session = models.IntegerField()
+    session = models.CharField(max_length = 200, default=None)
     is_mapped = models.BooleanField(default=False)
