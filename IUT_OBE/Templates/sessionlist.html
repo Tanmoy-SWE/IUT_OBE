@@ -55,7 +55,7 @@
             <h1
               class="flex-grow sm:pr-16 text-2xl font-medium title-font text-gray-900"
             >
-              Course List
+              Session List for {{course.c_code}}
             </h1>
           </div>
         </div>
@@ -66,7 +66,7 @@
             <button
               class="flex-shrink-0 text-white bg-green-500 border-0 py-0 px-2 focus:outline-none hover:bg-green-600 rounded text-lg mt-10 sm:mt-0"
             >
-              <a href="{% url 'addCourse' %}"> Add New Course </a>
+              <a href="{% url 'addCourse' %}"> Add New Session </a>
               
             </button>
           </div>
@@ -82,10 +82,10 @@
                 <tr
                   class="bg-gray-200 text-gray-600 uppercase text-sm leading-normal"
                 >
-                  <th class="py-3 px-6 text-left">Course Code</th>
-                  <th class="py-3 px-6 text-left">Course Name</th>
+                  <th class="py-3 px-6 text-left">Session</th>
+                  <th class="py-3 px-6 text-left">Year</th>
                 
-                  <th class="py-3 px-6 text-center">See Sessions</th>
+                  <th class="py-3 px-6 text-center"></th>
                 </tr>
               </thead>
               <tbody class="text-gray-600 text-sm font-light">

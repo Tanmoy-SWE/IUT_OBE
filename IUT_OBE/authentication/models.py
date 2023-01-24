@@ -1,5 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
+from datetime import date
+
 
 # Create your models here.
 class Course(models.Model):     
@@ -9,5 +11,7 @@ class Course(models.Model):
 
 class AssignedCourses(models.Model):
     course = models.ForeignKey(Course, on_delete=models.CASCADE)
-    session = models.CharField(max_length = 200, default=None)
+    session= models.CharField(max_length = 200, default=None)
+    year = models.IntegerField(default = date.today().year)
     is_mapped = models.BooleanField(default=False)
+    is_uploaded = models.BooleanField(default=False)
