@@ -15,3 +15,8 @@ class AssignedCourses(models.Model):
     year = models.IntegerField(default = date.today().year)
     is_mapped = models.BooleanField(default=False)
     is_uploaded = models.BooleanField(default=False)
+    
+class CO(models.Model):
+   coID = models.CharField(max_length=200, default=None)
+   description = models.CharField(max_length=2000, default=None)
+   CourseId = models.ForeignKey(Course, on_delete=models.CASCADE)
