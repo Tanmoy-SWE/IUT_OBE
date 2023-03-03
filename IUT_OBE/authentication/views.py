@@ -27,7 +27,7 @@ def home(request):
         context = {"courses": course}
         return render(request, "homepage.html", context)        
     
-    return render(request, 'Home.html', context)
+    return render(request, 'home.html', context)
 
 def register(request):
     form = CreateUserForm()
